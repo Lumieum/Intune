@@ -1,0 +1,3 @@
+https://github.com/TristanvanOnselen/WorkplaceAsCode/blob/master/ProActive_Remediation/Detect_shortcutsDesktop.ps1
+
+https://github.com/TristanvanOnselen/WorkplaceAsCode/blob/master/ProActive_Remediation/Remediate_shortcutsDesktop.ps1

@@ -1,0 +1,62 @@
+<RuleCollection Type="Exe" EnforcementMode="Enabled">
+    <FilePublisherRule Id="3c0fa33e-fc7e-466f-9c91-646c8509010e" Name="Disable Internet Explorer" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="INTERNET EXPLORER" BinaryName="IEXPLORE.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePathRule Id="526f0dd6-2d1f-4734-a2ed-73e7a76a5576" Name="Disable EXE in AppData" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\AppData\Local\*.exe" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="921cc481-6e17-4653-8f75-050b80acca20" Name="(Default Rule) All files located in the Program Files folder" Description="Allows members of the Everyone group to run applications that are located in the Program Files folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%PROGRAMFILES%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="a61c8b2c-a319-4cd0-9690-d2177cad7b51" Name="(Default Rule) All files located in the Windows folder" Description="Allows members of the Everyone group to run applications that are located in the Windows folder." UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%WINDIR%\*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="e20a1af9-cd0c-475b-ba21-262fad18ad6d" Name="Allow Google Chrome Extensions" Description="" UserOrGroupSid="S-1-1-0" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="%OSDRIVE%\Users\AppData\Local\Google\CHrome\User Data\Default\Extensions" />
+      </Conditions>
+    </FilePathRule>
+    <FilePathRule Id="fd686d83-a829-4351-8ff4-27c7de5755d2" Name="(Default Rule) All files" Description="Allows members of the local Administrators group to run all applications." UserOrGroupSid="S-1-5-32-544" Action="Allow">
+      <Conditions>
+        <FilePathCondition Path="*" />
+      </Conditions>
+    </FilePathRule>
+    <FilePublisherRule Id="d4c0dc95-0935-45d1-b181-87d474f35ba5" Name="Disable Microsoft Edge" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MICROSOFT CORPORATION, L=REDMOND, S=WASHINGTON, C=US" ProductName="MICROSOFT EDGE" BinaryName="MSEDGE.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="e88556b1-d416-41f4-a4d1-b5ea5b64a094" Name="Disable Mozilla Firefox" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=MOZILLA CORPORATION, L=MOUNTAIN VIEW, S=CALIFORNIA, C=US" ProductName="FIREFOX" BinaryName="FIREFOX.EXE">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="66004ef1-e679-4f9b-94f2-be6cc17b069d" Name="Disable Opera Browser" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=OPERA SOFTWARE AS, L=OSLO, C=NO" ProductName="*" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+    <FilePublisherRule Id="ed4b89c2-c795-4ed0-a406-b77864483039" Name="Disable Opera GX Browser" Description="" UserOrGroupSid="S-1-1-0" Action="Deny">
+      <Conditions>
+        <FilePublisherCondition PublisherName="O=OPERA SOFTWARE AS, L=OSLO, C=NO" ProductName="OPERA GX INTERNET BROWSER" BinaryName="*">
+          <BinaryVersionRange LowSection="*" HighSection="*" />
+        </FilePublisherCondition>
+      </Conditions>
+    </FilePublisherRule>
+  </RuleCollection>

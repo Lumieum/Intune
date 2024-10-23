@@ -1,0 +1,1 @@
+./Vendor/MSFT/AppLocker/ApplicationLaunchRestrictions/MSMHS1/EXE/Policy

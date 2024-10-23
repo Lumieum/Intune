@@ -1,0 +1,1 @@
+﻿Get-ChildItem $env:USERPROFILE\Desktop\*copy*.lnk | ForEach-Object { Remove-Item $_ }
