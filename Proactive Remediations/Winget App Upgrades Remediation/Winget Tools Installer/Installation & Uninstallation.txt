@@ -1,0 +1,4 @@
+powershell.exe -executionpolicy bypass -file Install-WingetTools.ps1
+
+
+powershell.exe -command "Uninstall-Module -Name WingetTools"
